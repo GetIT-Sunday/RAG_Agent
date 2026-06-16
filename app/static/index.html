@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RagAgent Knowledge Base</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="toolbar">
+      <div>
+        <h1>RagAgent 知识库</h1>
+        <p>CRUD、txt 上传、中文语义检索、流式返回、MCP tool。</p>
+      </div>
+      <button id="refreshBtn">刷新列表</button>
+    </section>
+
+    <section class="grid">
+      <form id="knowledgeForm" class="panel">
+        <h2>新增/编辑知识</h2>
+        <input id="knowledgeId" type="hidden" />
+        <label>标题</label>
+        <input id="title" placeholder="如：朱自清《春》" required />
+        <label>正文</label>
+        <textarea id="content" placeholder="直接输入知识内容" required></textarea>
+        <div class="actions">
+          <button type="submit">保存</button>
+          <button type="button" id="resetBtn">清空</button>
+        </div>
+      </form>
+
+      <form id="uploadForm" class="panel">
+        <h2>上传 txt</h2>
+        <label>标题（可选）</label>
+        <input id="uploadTitle" placeholder="默认使用文件名" />
+        <label>选择文件</label>
+        <input id="file" type="file" accept=".txt,text/plain" required />
+        <button type="submit">上传</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>知识库列表</h2>
+      <div id="knowledgeList" class="list"></div>
+      <div class="pager">
+        <button id="prevPage">上一页</button>
+        <span id="pageInfo">第 1 页</span>
+        <button id="nextPage">下一页</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>语义搜索</h2>
+      <div class="search-row">
+        <input id="query" placeholder="例如：春天 / 少年闰土 / 小孩子" />
+        <button id="searchBtn">普通搜索</button>
+        <button id="streamBtn">流式搜索</button>
+      </div>
+      <pre id="result" class="result"></pre>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

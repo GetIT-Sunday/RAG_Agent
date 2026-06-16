@@ -1,0 +1,3 @@
+# Optional dependencies for the full semantic embedding backend.
+# The system can run without this file by using fallback-hash retrieval.
+sentence-transformers>=3.3.1

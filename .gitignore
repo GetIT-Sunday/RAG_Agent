@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local environment
+.venv/
+.env
+.mcp.json
+
+# Runtime data
+data/*.db
+data/*.sqlite
+
+# System
+.DS_Store

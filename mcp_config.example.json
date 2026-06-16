@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "ragagent-knowledge-base": {
+      "command": "/Users/wengchuangchuang/Documents/LLM-Learning/.conda/envs/smearglepaper/bin/python",
+      "args": [
+        "/Users/wengchuangchuang/Documents/RagAgent/run_mcp.py"
+      ],
+      "env": {
+        "FORCE_EMBEDDING_FALLBACK": "true"
+      }
+    }
+  }
+}
